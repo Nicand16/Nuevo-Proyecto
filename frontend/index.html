@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor COP a USD</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Conversor COP → USD</h1>
+      <p class="subtitle">
+        App didáctica: frontend → backend → API externa → backend → frontend.
+      </p>
+
+      <label for="amount">Cantidad en COP</label>
+      <input
+        id="amount"
+        type="number"
+        min="1"
+        placeholder="Ej: 100000"
+        autocomplete="off"
+      />
+
+      <button id="convertBtn">Convertir</button>
+
+      <p id="loading" class="info hidden">Consultando tasa en tiempo real...</p>
+      <p id="error" class="error hidden"></p>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <h2>Resultado</h2>
+        <p><strong>COP ingresado:</strong> <span id="copValue"></span></p>
+        <p><strong>Tasa usada:</strong> <span id="rateValue"></span></p>
+        <p><strong>Total en USD:</strong> <span id="usdValue"></span></p>
+        <p><strong>Fecha/Hora de la tasa:</strong> <span id="timeValue"></span></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
